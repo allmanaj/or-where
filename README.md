@@ -2,12 +2,12 @@
 OrWhere is a Laravel inspired filter builder for Javascript arrays. It allows the dynamic building of complex filters using the `where`, `orWhere` and `whereIncludes` methods.
 
 ## Example
-OrWhere allows the writing of more user-friendly code when filtering through a large arrays of Objects (e.g. information from a database). It transforms your code form this:
+OrWhere allows the writing of more user-friendly code when filtering through a large arrays of Objects (e.g. information from a database). Here's an example without and with orWhere:
 
 ### Without orWhere
 ```
 users.filter(user => {
-    return (user.name == 'Angus' || user.name == 'Jess') && user.age >= 25;
+    return (user.name == 'Angus' || user.name == 'Jess' || user.name == 'Aaron') && user.age >= 25;
 });
 
 ```
@@ -15,12 +15,9 @@ users.filter(user => {
 ### With orWhere
 ```
 filter = FilterBuilder(users);
-filter.where(query => {
-    query.where('name', 'Angus')
-         .orWhere('name', 'Jess')
-})
-.where('age', '>', 25)
-.get()
+filter.whereIn('name', ['Angus', 'Jess', 'Aaron'])
+      .where('age', '>', 25)
+      .get()
 ```
 
 ## Installation
