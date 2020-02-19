@@ -1,5 +1,5 @@
 # OrWhere
-OrWhere is a Laravel inspired filter builder for Javascript arrays. It allows the dynamic building of complex filters using the `where`, `orWhere`, `whereIncludes` and `whereIn` methods.
+OrWhere is a Laravel inspired filter builder for Javascript arrays. It allows the dynamic building of complex filters using the `where`, `orWhere`, `whereIncludes`, `whereIn` and `whereContains` methods.
 
 ## Example
 OrWhere allows the writing of more user-friendly code when filtering through a large arrays of Objects (e.g. information from a database). Here's an example without and with orWhere:
