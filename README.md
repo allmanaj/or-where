@@ -144,9 +144,30 @@ filterBuilder.whereIncludes('hobbies', 'name', 'swimming').get();
 *            {name: 'reading', hoursNeeded: 3},
 *        ]
 *    }]
+*/
 ```
-
+The alternate option is that you can use `whereIncludes` with only two parameters. The `key` and the `value`. This is ideal for checking that simple arrays (e.g ['swimming', 'cycling', 'diving']) contain a value.
 
 ```
 filterBuilder.whereIncludes(key, value)
+```
+If we imagine that `hobbies` is an array of strings rather than objects
+```
+filterBuilder.whereIncludes('hobbies', 'reading')
+//This would return the objects for `Jess` and `Aaron`.
+```
+
+### WhereIn
+Documentation in progress...
+```
+filterBuilder.whereIn('name', ['Angus', 'Jess']) - returns the objects for `Angus` and `Jess`
+```
+
+
+### WhereContains
+Runs a case insensitive check to see if the `value` in the object contains the given string
+Documentation in progress...
+
+```
+filterBuilder.whereContains('name', 'a') - returns the objects for `Angus` and `Aaron`
 ```
