@@ -68,7 +68,11 @@ filterBuilder.where(query => {
 .where('age', '>=', 25)
 .get();
 ```
-This would filter out any items where then name is neither `Angus` nor `Jess` and the age is under 25.
+This would filter out any items where then name is neither `Angus` nor `Jess` and the age is under 25. so 
+```
+[{name: 'Jess', age: 25}]
+```
+woudl be returned
 
 ### orWhere
 This can be used in the exact same way as `where()` however it acts as an `or` (` || `) operator rather than an `and`(`&&`).
