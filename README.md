@@ -158,6 +158,8 @@ filterBuilder.whereIncludes('hobbies', 'reading')
 ```
 
 ### WhereIn
+Runs a check to see whether the `value` of the object is contained within the array provided. Useful to shorten multiple `orWhere` checks on the same `key`
+
 Documentation in progress...
 ```
 filterBuilder.whereIn('name', ['Angus', 'Jess']) - returns the objects for `Angus` and `Jess`
@@ -165,7 +167,8 @@ filterBuilder.whereIn('name', ['Angus', 'Jess']) - returns the objects for `Angu
 
 
 ### WhereContains
-Runs a case insensitive check to see if the `value` in the object contains the given string
+Runs a case insensitive check to see if the `value` in the object contains the given string. Useful with search
+
 Documentation in progress...
 
 ```
