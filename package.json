@@ -1,0 +1,16 @@
+{
+  "name": "filter-builder",
+  "version": "0.0.1",
+  "description": "A laravel-esque query builder for JS arrays",
+  "author": "Angus Allman",
+  "license": "ISC",
+  "devDependencies": {},
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  }
+}
