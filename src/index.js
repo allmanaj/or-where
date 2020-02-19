@@ -49,6 +49,7 @@ export class FilterBuilder {
 
   stripEmpties() {
     this.query = this.query.replace(/&& \(\)/g, "");
+    this.query = this.query.replace(/\(\) &&/g, "");
     this.query = this.query.replace(/\(\)  &&/g, "");
   }
   get() {
