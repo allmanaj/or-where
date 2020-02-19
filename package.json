@@ -1,6 +1,6 @@
 {
   "name": "or-where",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A laravel-esque query builder for JS arrays",
   "author": "Angus Allman",
   "homepage": "https://github.com/allmanaj/or-where/",
