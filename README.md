@@ -72,7 +72,7 @@ This would filter out any items where then name is neither `Angus` nor `Jess` an
 ```
 [{name: 'Jess', age: 25}]
 ```
-woudl be returned
+would be returned.
 
 ### orWhere
 This can be used in the exact same way as `where()` however it acts as an `or` (` || `) operator rather than an `and`(`&&`).

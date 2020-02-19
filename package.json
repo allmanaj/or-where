@@ -1,9 +1,14 @@
 {
   "name": "or-where",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A laravel-esque query builder for JS arrays",
   "author": "Angus Allman",
+  "homepage": "https://github.com/allmanaj/or-where/",
   "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/allmanaj/or-where.git"
+  },
   "devDependencies": {
     "microbundle": "^0.11.0"
   },
