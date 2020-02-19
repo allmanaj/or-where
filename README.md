@@ -117,7 +117,7 @@ would be returned.
 ### orWhere
 This can be used in the exact same way as `where()` however it acts as an `or` (` || `) operator rather than an `and`(`&&`).
 
-### whereIncludes
+### whereIncludes / orWhereIncludes
 The `whereIncludes` method is useful when you need to check if an object property that is an array contains a certain value. The `whereIncludes` method takes 2 or 3 parameters.
 ```javascript
 filterBuilder.whereIncludes(key, keyToFind, value)
@@ -153,24 +153,24 @@ filterBuilder.whereIncludes(key, value)
 If we imagine that `hobbies` is an array of strings rather than objects
 ```javascript
 // Returns the objects`Jess` and `Aaron`.
-filterBuilder.whereIncludes('hobbies', 'reading')
+filterBuilder.whereIncludes('hobbies', 'reading').get()
 ```
 
-### WhereIn
+### whereIn / orWhereIn
 Runs a check to see whether the `value` of the object is contained within the array provided. Useful to shorten multiple `orWhere` checks on the same `key`
 
 ```javascript
 // Returns the objects for `Angus` and `Jess`
-filterBuilder.whereIn('name', ['Angus', 'Jess'])
+filterBuilder.whereIn('name', ['Angus', 'Jess']).get()
 ```
 
 
-### WhereContains
+### whereContains / orWhereContains
 Runs a case insensitive check to see if the `value` in the object contains the given string. Useful with search.
 
 ```javascript
 // Returns the objects for `Angus` and `Aaron`
-filterBuilder.whereContains('name', 'a')
+filterBuilder.whereContains('name', 'a').get()
 ```
 
 ### Get
