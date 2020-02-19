@@ -16,7 +16,7 @@ users.filter(user => {
 ```
 filter = FilterBuilder(users);
 filter.whereIn('name', ['Angus', 'Jess', 'Aaron'])
-      .where('age', '>', 25)
+      .where('age', '>=', 25)
       .get()
 ```
 
