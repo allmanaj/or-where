@@ -50,9 +50,30 @@ In order to provide a bit of context I'll be using the following dataset all exa
 
 ```
 const data = [
-    {name: 'Angus', age: '24'},
-    {name: 'Jess', age: 25},
-    {name: 'Aaron', age: 25}
+    {
+        name: 'Angus',
+        age: 24,
+        hobbies: [
+            {name: 'swimming', hoursNeeded: 2},
+            {name: 'running', hoursNeeded: 1}
+        ]
+    },
+    {
+        name: 'Jess',
+        age: 25,
+        hobbies:[
+            {name: 'swimming', hoursNeeded: 2},
+            {name: 'reading', hoursNeeded: 3},
+        ]
+    },
+    {
+        name: 'Aaron',
+        age: 25,
+        hobbies:[
+            {name: 'go-karting', hoursNeeded: 3}
+            {name: 'reading', hoursNeeded: 1}
+        ]
+    }
 ];
 ```
 
@@ -89,9 +110,43 @@ filterBuilder.where(query => {
 ```
 This would filter out any items where then name is neither `Angus` nor `Jess` and the age is under 25. so 
 ```
-[{name: 'Jess', age: 25}]
+[{name: 'Jess', age: 25, ...truncated}]
 ```
 would be returned.
 
 ### orWhere
 This can be used in the exact same way as `where()` however it acts as an `or` (` || `) operator rather than an `and`(`&&`).
+
+### whereIncludes
+The `whereIncludes` method is useful when you need to check if an object property that is an array contains a certain value. The `whereIncludes` method takes 2 or 3 parameters.
+```
+filterBuilder.whereIncludes(key, keyToFind, value)
+```
+The best way to show this is with an example:
+```
+filterBuilder.whereIncludes('hobbies', 'name', 'swimming').get();
+
+/** 
+* returns the following
+*    [{
+*        name: 'Angus',
+*        age: 24,
+*        hobbies: [
+*            {name: 'swimming', hoursNeeded: 2},
+*            {name: 'running', hoursNeeded: 1}
+*        ]
+*    },
+*    {
+*        name: 'Jess',
+*        age: 25,
+*        hobbies:[
+*            {name: 'swimming', hoursNeeded: 2},
+*            {name: 'reading', hoursNeeded: 3},
+*        ]
+*    }]
+```
+
+
+```
+filterBuilder.whereIncludes(key, value)
+```
