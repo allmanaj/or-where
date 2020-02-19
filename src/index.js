@@ -32,14 +32,18 @@ export class FilterBuilder {
     return this.where(...query);
   }
 
-  whereIncludes(list, key, value) {
+  whereIncludes(list, key, value = null) {
+    if(value == null){
+      this.query += `(item.${list} ? item.${list}.includes('${key}') : false)`;
+      return this;
+    } 
     this.query += `(item.${list} ? item.${list}.some(element => element.${key} === '${value}') : false)`;
     return this
   }
 
-  orWhereIncludes(list, key, value) {
+  orWhereIncludes(list, key, value = null) {
     this.query += " || ";
-    this.query += `(item.${list} ? item.${list}.some(element => element.${key} === '${value}') : false)`;
+    this.whereIncludes(list, key, value);
     return this
   }
 
