@@ -49,7 +49,6 @@ export class FilterBuilder {
   }
   get() {
     this.stripEmpties();
-    console.log(this.query);
     return this.data.filter(item => {
       return new Function("item", `"use strict";return ${this.query};`)(item);
     });
