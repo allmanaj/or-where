@@ -14,9 +14,9 @@ export class FilterBuilder {
       if (query.length === 1) {
         this.query += `(item.${query[0]})`;
       } else if (query.length === 2) {
-        this.query += `(item.${query[0]} == '${query[1]}')`;
+        this.query += `(item.${query[0]} == ${typeof query[1] === 'string' ? "'" + query[1] + "'" : query[1]})`;
       } else if (query.length === 3) {
-        this.query += `(item.${query[0]} ${query[1]} '${query[2]}')`;
+        this.query += `(item.${query[0]} ${query[1]} ${typeof query[2] === 'string' ? "'" + query[2] + "'" : query[2]})`;
       }
     }
     return this;

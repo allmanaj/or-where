@@ -13,7 +13,8 @@
                     hobbies: [
                         { name: 'swimming', hoursNeeded: 2 },
                         { name: 'running', hoursNeeded: 1 }
-                    ]
+                    ],
+                    canDrive: false,
                 },
                 {
                     name: 'Jess',
@@ -21,7 +22,8 @@
                     hobbies: [
                         { name: 'swimming', hoursNeeded: 2 },
                         { name: 'reading', hoursNeeded: 3 },
-                    ]
+                    ],
+                    canDrive: true,
                 },
                 {
                     name: 'Aaron',
@@ -29,11 +31,12 @@
                     hobbies: [
                         { name: 'go-karting', hoursNeeded: 3 },
                         { name: 'reading', hoursNeeded: 1 }
-                    ]
+                    ],
+                    canDrive: true,
                 }
             ];
             const filterBuilder = new e(data);
-            console.log(filterBuilder.where('name', 'Angus').get());
+            console.log(filterBuilder.where('canDrive', '==', false).get());
     </script>
 </head>
 <body>
