@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>or-where test</title>
+    <script src="../dist/index.js"></script>
+    <script>
+        const data = [
+                {
+                    name: 'Angus',
+                    age: 24,
+                    hobbies: [
+                        { name: 'swimming', hoursNeeded: 2 },
+                        { name: 'running', hoursNeeded: 1 }
+                    ]
+                },
+                {
+                    name: 'Jess',
+                    age: 25,
+                    hobbies: [
+                        { name: 'swimming', hoursNeeded: 2 },
+                        { name: 'reading', hoursNeeded: 3 },
+                    ]
+                },
+                {
+                    name: 'Aaron',
+                    age: 25,
+                    hobbies: [
+                        { name: 'go-karting', hoursNeeded: 3 },
+                        { name: 'reading', hoursNeeded: 1 }
+                    ]
+                }
+            ];
+            const filterBuilder = new e(data);
+            console.log(filterBuilder.where('name', 'Angus').get());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
