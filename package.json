@@ -1,6 +1,6 @@
 {
   "name": "eloquent-filter",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "A laravel-esque query builder for JS arrays",
   "author": "Angus Allman",
   "homepage": "https://github.com/allmanaj/eloquent-filter/",
