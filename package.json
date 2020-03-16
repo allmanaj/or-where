@@ -1,13 +1,13 @@
 {
-  "name": "or-where",
+  "name": "eloquent-filter",
   "version": "0.0.14",
   "description": "A laravel-esque query builder for JS arrays",
   "author": "Angus Allman",
-  "homepage": "https://github.com/allmanaj/or-where/",
+  "homepage": "https://github.com/allmanaj/eloquent-filter/",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/allmanaj/or-where.git"
+    "url": "https://github.com/allmanaj/eloquent-filter.git"
   },
   "devDependencies": {
     "microbundle": "^0.11.0"
