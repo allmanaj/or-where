@@ -59,7 +59,7 @@ export class FilterBuilder {
     this.makeAnd();
     this.query += `(item.${key} ? ['${list.join(
       "', '"
-    )}'].includes(item.${key}) : false)`;
+    )}'].includes("" + item.${key}) : false)`;
     return this;
   }
 
